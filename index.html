@@ -47,11 +47,12 @@
       <article class="post">
         <h2 class="post__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="post__image">
-          <img src="./images/optimized_image_sm.png" srcset="
-              ./images/optimized_image_sm.png 1x,
-              ./images/optimized_image_lg.png 2x,
-            " alt="Фургон, нарисованный с помощью пикселей, едет ночью по улице"
-            class="post__image-svg filter-grayscale" loading="lazy" />
+          <img 
+            src="./images/optimized_image_sm.png"
+            srcset="./images/optimized_image_sm.png 1x, ./images/optimized_image_lg.png 2x"
+            alt="Фургон, нарисованный с помощью пикселей, едет ночью по улице" 
+            class="post__image-svg filter-grayscale"
+            loading="lazy" />
         </div>
         <div class="post__text">
           <p>
@@ -87,8 +88,7 @@
           </button>
         </div>
       </article>
-      <button class="save__button card-button" type="button" onclick="window['dialog-id'].showModal()"
-        aria-controls="dialog-id">
+      <button class="save__button card-button" type="button">
         <svg width="28" height="28" class="floppy-icon">
           <use href="./svg/floppy.svg#icon-floppy" fill="currentColor"></use>
         </svg>

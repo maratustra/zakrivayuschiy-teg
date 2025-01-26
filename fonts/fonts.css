@@ -10,9 +10,11 @@
 
 @font-face {
   font-family: 'Inter-Variable';
-  src: url('./Inter-Variable.woff2') format('woff2'),
-       url('./Inter-Variable.woff') format('woff'),
-       url('./Inter-Variable.ttf') format('ttf');
-  font-weight: 400 700;
+  src:
+    url('../fonts/Inter-Variable.woff2') format('woff2 supports variations'),
+    url('../fonts/Inter-Variable.woff2') format('woff2-variations'),
+    url('./Inter-Variable.ttf') format('ttf');
+  font-display: swap;
+  font-weight: 400 785;
   font-style: normal;
 }
