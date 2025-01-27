@@ -22,12 +22,10 @@
 }
 
 .heart .core {
-  fill: none;
   transition: fill 0.3s linear;
 }
 
 .heart .main-body {
-  fill: none;
   transition: fill 0.3s 0.05s linear;
 }
 
@@ -76,6 +74,19 @@
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s 0.3s ease-in 1;
   transform-origin: center;
+}
+
+.main-body, .core {
+  fill: var(--background-color, #fff);
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.is-liked .sparks {
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 @keyframes scale {
