@@ -8,9 +8,18 @@
 
   --color-accent: #000;
   --button-text-color: #000;
+  --label-stroke: #000;
 
-  --background-image: url('../svg/pattern-light.svg');
   --background-color: #fff;
+  --background-gradient-light: 
+    repeating-linear-gradient(90deg, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(0deg, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+
+  --background-gradient-dark: 
+    repeating-linear-gradient(90deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(0deg, #000 0px, #000 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
 
   --content-width: clamp(600px, 48.6%, 800px);
 
@@ -28,7 +37,6 @@
     --button-text-color: #00CC14;
     --font-weight-text: 465;
     --font-weight-header: 785;
-    --background-image: url('../svg/pattern-light.svg');
     --background-color: #fff;
     --content-width: clamp(600px, 48.6%, 800px);
     --first-paragraph-opacity: 0.5;
