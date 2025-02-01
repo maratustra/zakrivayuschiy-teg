@@ -159,11 +159,11 @@
   line-height: 1em;
   font-variation-settings: 'wght' var(--font-weight-header, 700);
   color: var(--label-stroke);
-  text-transform: uppercase;
   mix-blend-mode: hard-light;
   opacity: 0.5;
   z-index: 2;
   padding: 5px 10px;
+  text-transform: uppercase;
 }
 
 .post__text {
@@ -212,8 +212,9 @@
   font-weight: 400;
   line-height: 1em;
   z-index: 1;
-  color: var(--button-text-color, #000);
+  color: var(--button-text-color, #fff);
   transition: color 1s ease;
+  mix-blend-mode: difference;
 }
 
 .floppy-icon {
@@ -221,7 +222,8 @@
   position: relative;
   z-index: 1;
   color: var(--button-text-color, #fff);
-  transition: color 1s ease;
+  mix-blend-mode: difference;
+  transition: color 0.5s ease;
 }
 
 .like-icon {
@@ -241,9 +243,8 @@
   background-color: var(--background-color, #fff);
   position: relative;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
   padding: 5px 10px;
-  cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .card-button::before {
@@ -255,8 +256,8 @@
   height: 100%;
   background-color: currentColor;
   transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
   z-index: 0;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card-button:hover::before {
@@ -308,3 +309,93 @@
        1px  1px 0 var(--background-color);
   }
 }
+
+.dialog {
+  width: 353px;
+  color: inherit;
+  background-color: var(--background-color, #fff);
+  border: 2px solid currentColor;
+  padding-block: 30px;
+  padding-inline: 30px;
+  display: flex;
+  position: fixed;
+  inset: 0;
+  transition: opacity 0.3s ease-in-out;
+  margin: auto;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+} 
+
+.dialog__content {
+  display: flex;
+  gap: 20px;
+}
+
+.dialog__content .floppy {
+  width: 60px;
+}
+
+.dialog__description {
+  font-family: var(--accent-font, 'PressStart2P');
+  font-variation-settings: 'wght' var(--font-weight-text, 400);
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  max-width: 230px;
+}
+
+.dialog__button {
+  margin-top: 30px;
+  width: 100%;
+  min-height: 38px;
+}
+
+.prevertering {
+  padding: 15px 20px;
+  margin-bottom: 1em;
+  background-color: var(--preview-bg-color, rgba(0, 0, 0, 0.04));
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
+  font-style: italic;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(-10deg);
+}
+
+.filter-invert {
+  filter: invert(100%);
+}
+
+.filter-brightness {
+  filter: brightness(1.2);
+}
+
+.filter-sepia {
+  filter: sepia(20%);
+}
+
+.filter-contrast {
+  filter: contrast(110%);
+}
+
+.filter-multiple {
+  filter: grayscale(10%) contrast(120%) brightness(1.2);
+}
+
+.filter-grayscale {
+  filter: grayscale(100%);
+}
+
+.filter-blur {
+  filter: blur(1px);
+}
+
