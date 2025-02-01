@@ -22,7 +22,7 @@
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;  
+  background-attachment: fixed;
 }
 
 .header {
@@ -157,7 +157,7 @@
   font-family: var(--font-accent, "PressStart2P");
   font-weight: var(--font-weight-text, 400);
   line-height: 1em;
-  font-variation-settings: 'wght' var(--font-weight-header, 700);
+  font-variation-settings: "wght" var(--font-weight-header, 700);
   color: var(--label-stroke);
   mix-blend-mode: hard-light;
   opacity: 0.5;
@@ -302,11 +302,9 @@
 
 @supports not (-webkit-text-stroke: 1px var(--background-color)) {
   .post__label {
-    text-shadow:
-      -1px -1px 0 var(--background-color),
-       1px -1px 0 var(--background-color),
-      -1px  1px 0 var(--background-color),
-       1px  1px 0 var(--background-color);
+    text-shadow: -1px -1px 0 var(--background-color),
+      1px -1px 0 var(--background-color), -1px 1px 0 var(--background-color),
+      1px 1px 0 var(--background-color);
   }
 }
 
@@ -331,7 +329,7 @@
 dialog:not([open]) {
   pointer-events: none;
   opacity: 0;
-} 
+}
 
 .dialog__content {
   display: flex;
@@ -343,8 +341,8 @@ dialog:not([open]) {
 }
 
 .dialog__description {
-  font-family: var(--accent-font, 'PressStart2P');
-  font-variation-settings: 'wght' var(--font-weight-text, 400);
+  font-family: var(--accent-font, "PressStart2P");
+  font-variation-settings: "wght" var(--font-weight-text, 400);
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -364,7 +362,7 @@ dialog:not([open]) {
   border: 1px solid var(--color-accent);
   border-radius: 8px;
   font-style: italic;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .filter-hue-rotate {
@@ -398,4 +396,3 @@ dialog:not([open]) {
 .filter-blur {
   filter: blur(1px);
 }
-
