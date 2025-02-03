@@ -12,6 +12,7 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
 @keyframes arrow {
   0% {
     transform: translateX(0);
@@ -66,16 +67,6 @@
   transition: fill 0.3s 0.06s linear;
 }
 
-.like-icon.is-liked .heart {
-  animation: big-heart 0.3s 0.1s ease-in 1;
-  transform-origin: center;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s 0.3s ease-in 1;
-  transform-origin: center;
-}
-
 .main-body, .core {
   fill: var(--background-color, #fff);
 }
@@ -84,45 +75,48 @@
   opacity: 0;
 }
 
+.like-icon.is-liked .heart {
+  animation: heart-beat 0.3s ease-in-out;
+  transform-origin: center;
+}
+
 .is-liked .sparks {
   opacity: 1;
-  transition: opacity 0.3s ease;
+  animation: sparks-fly 0.3s ease-in-out;
 }
 
-@keyframes scale {
+.like-icon.is-liked .sparks {
+  opacity: 0;
+  animation: sparks-fly 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heart-beat {
   0% {
     transform: scale(1);
   }
+  30% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparks-fly {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
   50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
     transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes sparks {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes big-heart {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1.5;
-  }
-
-  100% {
-    opacity: 1;
   }
 }

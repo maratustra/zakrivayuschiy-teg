@@ -11,7 +11,6 @@ body.theme-light {
   --background-image: var(--background-gradient-light);
   --font-weight-text: 400;
   --font-weight-header: 700;
-  --first-paragraph-opacity: 0.5;
   --heart-contour: #000;
   --heart-fill: #ff0000;
   --label-stroke: #000;
@@ -27,11 +26,9 @@ body.theme-dark {
   --button-text-color: #00cc14;
   --font-weight-text: 465;
   --font-weight-header: 785;
-  --first-paragraph-opacity: 0.5;
   --heart-contour: #00cc14;
   --heart-fill: #ff0000;
   --label-stroke: #00cc14;
-  --button-text-color: #00cc14;
   --button-bg-color: #000;
   --preview-bg-color: rgba(0, 204, 20, 0.1);
 }
@@ -45,12 +42,26 @@ body.theme-dark {
     --button-text-color: #00cc14;
     --font-weight-text: 465;
     --font-weight-header: 785;
-    --first-paragraph-opacity: 0.5;
     --heart-contour: #00cc14;
     --heart-fill: #ff0000;
     --label-stroke: #00cc14;
-    --button-text-color: #00cc14;
     --button-bg-color: #000;
     --preview-bg-color: rgba(0, 204, 20, 0.1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --background-color: #fff;
+    --background-image: var(--background-gradient-light);
+    --button-text-color: #fff;
+    --color-accent: #000;
+    --font-weight-text: 400;
+    --font-weight-header: 700;
+    --heart-contour: #000;
+    --heart-fill: #ff0000;
+    --label-stroke: #000;
+    --button-bg-color: #000;
+    --preview-bg-color: rgba(0, 0, 0, 0.04);
   }
 }

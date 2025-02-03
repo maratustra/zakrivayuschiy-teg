@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --font-main: 'Inter-Variable', sans-serif;
-  --font-accent: 'PressStart2P', monospace;
+  --font-accent: 'PressStart2P', fantasy;
 
   --font-weight-text: 400;
   --font-weight-header: 700;
@@ -23,8 +23,6 @@
 
   --content-width: clamp(600px, 48.6%, 800px);
 
-  --first-paragraph-opacity: 0.5;
-
   --save-button-direction: row;
 
   --floppy-size: 21px;
@@ -37,9 +35,7 @@
     --button-text-color: #00CC14;
     --font-weight-text: 465;
     --font-weight-header: 785;
-    --background-color: #fff;
     --content-width: clamp(600px, 48.6%, 800px);
-    --first-paragraph-opacity: 0.5;
     --save-button-direction: row;
     --floppy-size: 21px;
   }
@@ -50,8 +46,5 @@
       --content-width: 100%;
       --save-button-direction: column;
       --floppy-size: 28px;
-      /* --dialog-width: 341px;
-      --dialog-padding-inline: 40px;
-      --logo-right: 13px; */
   }
 }
