@@ -330,7 +330,7 @@ dialog:not([open]) {
   gap: 20px;
 }
 
-.dialog__content .floppy-icon {
+.dialog__content .floppy {
   width: 60px;
 }
 
@@ -348,16 +348,6 @@ dialog:not([open]) {
   width: 100%;
   min-height: 38px;
 }
-
-/* .prevertering {
-  padding: 15px 20px;
-  margin-bottom: 1em;
-  background-color: var(--preview-bg-color, rgba(0, 0, 0, 0.04));
-  border: 1px solid var(--color-accent);
-  border-radius: 8px;
-  font-style: italic;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
 
 .filter-hue-rotate {
   filter: hue-rotate(-10deg);

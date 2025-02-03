@@ -12,14 +12,15 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
-/* @keyframes arrow {
+
+@keyframes arrow {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(4px);
   }
-} */
+}
 
 .heart .core {
   transition: fill 0.3s linear;
